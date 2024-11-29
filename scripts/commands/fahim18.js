@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports = {
   config:{
-	name: "fahim12",
+	name: "Fahim18",
         version: "1.0.1",
         prefix: false,
 	permssion: 0,
@@ -19,18 +19,18 @@ handleEvent: async function({ api, event, client, __GLOBAL }) {
   const axios = require('axios')
 const media = (
     await axios.get(
-      'https://i.imgur.com/ahim.mp3',
+      'https://i.imgur.com/jArC3xS.mp4',
       { responseType: 'stream' }
     )
   ).data;
 
-	if (body.indexOf("🥰")==0 || body.indexOf("😍")==0) {
+	if (body.indexOf("@everyone")==0 || body.indexOf("jikir")==0) {
 		var msg = {
 				body: "Md Fahim islam ",
 				attachment: media
 			}
 			api.sendMessage( msg, threadID, messageID);
-    api.setMessageReaction("🤭", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🤣", event.messageID, (err) => {}, true)
 		}
 	},
 	start: function({ nayan }) {

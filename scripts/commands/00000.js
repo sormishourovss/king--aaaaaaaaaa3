@@ -1,25 +1,31 @@
 const fs = require("fs");
-module.exports.config = {
-  name: "00000",
-  version: "2.0.0",
-  permission: 0,
-  credits: "nayan",
-  description: "",
-  prefix: false,
-  category: "user",
-  usages: "",
-  cooldowns: 5,
-};
+module.exports = {
+  config:{
+	name: "fahi.",
+        version: "1.0.1",
+        prefix: false,
+	permssion: 0,
+	credits: "nayan", 
+	description: "Fun",
+	category: "no prefix",
+	usages: "😒",
+        cooldowns: 5, 
+},
 
-module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
+handleEvent: function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Rakhi")==0 || (event.body.indexOf("@বেই মান")==0 || (event.body.indexOf("@সোহাগ হোসেন")==0 || (event.body.indexOf("@Akhi Akther")==0)))) {
+  const content = event.body ? event.body : '';
+  const body = content.toLowerCase();
+	if (body.indexOf("😍")==0 || body.indexOf("🥰")==0 || body.indexOf("❤️‍🩹")==0 || body.indexOf("💘")==0) {
 		var msg = {
-				body: " ওরে কেউ মেসোন দিবি না ও আমার বস ফাহিম এর কলিজা হয়😇😻 :))"
-    }
-			api.sendMessage(msg, threadID, messageID);
+				body: "এ্ঁতো্ঁ ভা্ঁলো্ঁবা্ঁসা্ঁ ক্ঁই্ঁ পা্ঁও্ঁ আ্ঁমা্ঁর্ঁ ব্ঁস্ঁ ফা্ঁহি্ঁম্ঁ কে্ঁও্ঁ দা্ঁও্ঁ",
+				attachment: fs.createReadStream(__dirname + `/Nayan/ahim.mp3`)
+			}
+			api.sendMessage( msg, threadID, messageID);
+    api.setMessageReaction("😁", event.messageID, (err) => {}, true)
 		}
-	}
-	module.exports.run = function({ api, event, client, __GLOBAL }) {
+	},
+	start: function({ nayan }) {
 
+  }
 }
