@@ -2,6 +2,7 @@ module.exports.config = {
   name: "adminNoti",
   eventType: [
     "log:thread-admins",
+    "log:thread-name",
     "log:user-nickname",
     "log:thread-call",
     "log:thread-icon",
@@ -52,6 +53,11 @@ module.exports.run = async function({ event, api, Threads, Users }) {
           const formattedNickname = nickname || "deleted nickname";
           api.sendMessage(`[ GROUP ]\n❯ Updated nickname for ${participantName}: ${formattedNickname}.`, threadID);
         }
+        break;
+      }
+      case "log:thread-name": {
+        dataThread.threadName = logMessageData.name || null;
+        api.sendMessage(`[ GROUP UPDATE ]\n❯ ${(dataThread.threadName) ? `Updated Group Name to: ${dataThread.threadName}` : 'Cleared the Group Name'}.`, threadID);
         break;
       }
       case "log:thread-icon": {
