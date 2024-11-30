@@ -9,14 +9,14 @@
   "saveState": true,
   "banMsg": false,
   "adminOnlyMsg": false,
-  "BOTNAME": "fahim-bot🥰",
+  "BOTNAME": "shourov-bot🥰",
   "PREFIX": "/",
   "OPERATOR": [
     "",
-    "100046430705172"
+    "100070297030133"
   ],
   "ADMINBOT": [
-    "100046430705172",
+    "100070297030133",
     ""
   ],
   "OWNER": ["100000959749712"], 
