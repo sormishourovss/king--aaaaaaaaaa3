@@ -15,9 +15,9 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
     var { threadID, messageID } = event;
     let react = event.body.toLowerCase();
     
-    if (react.includes("owner") || react.includes("boss fahim") || react.includes("Md Fahim Islam ")) {
+    if (react.includes("owner") || react.includes("boss shourov") || react.includes("king shourov ")) {
         var msg = {
-            body: "╭╼|━━━━━━━━━━━━━━|╾╮\n          Md Fahim Islam \n╰╼|━━━━━━━━━━━━━━|╾╯"
+            body: "╭╼|━━━━━━━━━━━━━━|╾╮\n          king shourov \n╰╼|━━━━━━━━━━━━━━|╾╯"
         };
 
         api.sendMessage(msg, threadID, messageID);
