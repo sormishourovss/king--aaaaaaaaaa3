@@ -19,15 +19,15 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.imgur.com/THk8hul.jpeg",
+var link = ["https://imgur.com/a/DkHQBji",
 
-            "https://i.imgur.com/Gas6EM7.jpeg", 
+            "https://imgur.com/a/DkHQBji", 
 
-            "https://i.imgur.com/ymHWOTm.jpeg",
+            "https://imgur.com/a/DkHQBji",
 
-"",
+"https://imgur.com/a/DkHQBji",
 
-            "https://i.imgur.com/Gas6EM7.jpeg"];
+            "https://imgur.com/a/DkHQBji"];
 
 var callback = () => api.sendMessage({body:`আসসালামু আলাইকুম 
 "༆𝐊𝐈𝐍𝐆 𝐒𝐇𝐎𝐔𝐑𝐎𝐕◥»̶̶͓͓͓̽̽̽𝄞⋆⃝🌺প⋆⃝🌸࿐" 
